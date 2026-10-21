@@ -1,0 +1,38 @@
+<!--
+    Input:
+        vendor/samsung/hardware/vendor/ril/rild/devicemanifest/samsung/vendor.samsung.hardware.sehradio_manifest_2_202404.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.bridge</name>
+        <fqname>ISehRadioBridge/slot1</fqname>
+        <fqname>ISehRadioBridge/slot2</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.channel</name>
+        <fqname>ISehRadioChannel/epdgd</fqname>
+        <fqname>ISehRadioChannel/epdgd2</fqname>
+        <fqname>ISehRadioChannel/imsd</fqname>
+        <fqname>ISehRadioChannel/imsd2</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.data</name>
+        <fqname>ISehRadioData/slot1</fqname>
+        <fqname>ISehRadioData/slot2</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.messaging</name>
+        <fqname>ISehRadioMessaging/slot1</fqname>
+        <fqname>ISehRadioMessaging/slot2</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.network</name>
+        <fqname>ISehRadioNetwork/slot1</fqname>
+        <fqname>ISehRadioNetwork/slot2</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.sim</name>
+        <fqname>ISehRadioSim/slot1</fqname>
+        <fqname>ISehRadioSim/slot2</fqname>
+    </hal>
+</manifest>
