@@ -10,6 +10,84 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "android.hardware.audio.common-util",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/android.hardware.audio.common-util.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/android.hardware.audio.common-util.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.graphics.extension.composer3-V2-ndk",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/android.hardware.graphics.extension.composer3-V2-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/android.hardware.graphics.extension.composer3-V2-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "arm.graphics-V1-ndk",
     owner: "samsung",
     strip: {
@@ -5071,51 +5149,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "libsensorndkbridge",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libsensorndkbridge.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libbinder_ndk",
-                "libutils",
-                "android.frameworks.sensorservice-V1-ndk",
-                "android.hardware.sensors-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsensorndkbridge.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libbinder_ndk",
-                "libutils",
-                "android.frameworks.sensorservice-V1-ndk",
-                "android.hardware.sensors-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
 rust_prebuilt_dylib {
     name: "libserde",
     owner: "samsung",
@@ -5758,7 +5791,8 @@ rust_prebuilt_dylib {
 }
 
 cc_prebuilt_library_shared {
-    name: "libuuid",
+    name: "libuuid_vendor",
+    stem: "libuuid",
     owner: "samsung",
     strip: {
         none: true,
@@ -6372,7 +6406,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsamsungSoundbooster_plus",
+    name: "libsamsungSoundbooster_plus_stock",
+    stem: "libsamsungSoundbooster_plus",
     owner: "samsung",
     strip: {
         none: true,
@@ -8349,37 +8384,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeystore-engine-wifi-hidl",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libkeystore-engine-wifi-hidl.so",
-            ],
-            shared_libs: [
-                "android.system.keystore2-V1-ndk",
-                "libbase",
-                "libbinder_ndk",
-                "libcrypto",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "liboemcrypto",
     owner: "samsung",
     strip: {
@@ -8969,7 +8973,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libwifi-hal",
+    name: "libwifi-hal_vendor",
+    stem: "libwifi-hal",
     owner: "samsung",
     strip: {
         none: true,
@@ -8985,31 +8990,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libnl",
                 "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwifi-system-iface",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libwifi-system-iface.so",
-            ],
-            shared_libs: [
-                "libbase",
                 "libc++",
                 "libc",
                 "libm",
@@ -10755,7 +10735,7 @@ cc_prebuilt_binary {
                 "liblog",
                 "libnl",
                 "libutils",
-                "libwifi-hal",
+                "libwifi-hal_vendor",
                 "libwifi-system-iface",
                 "libxml2",
                 "vendor.samsung.hardware.wifi.nan-V1-ndk",
@@ -11382,7 +11362,7 @@ cc_prebuilt_binary {
                 "liblog",
                 "libnl",
                 "libutils",
-                "libwifi-hal",
+                "libwifi-hal_vendor",
                 "libwifi-system-iface",
                 "libxml2",
                 "libz",
@@ -11543,7 +11523,8 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "secril_config_svc",
+    name: "secril_config_svc_stock",
+    stem: "secril_config_svc",
     owner: "samsung",
     target: {
         android_arm64: {
@@ -11630,7 +11611,7 @@ cc_prebuilt_binary {
             ],
             shared_libs: [
                 "libteecl",
-                "libuuid",
+                "libuuid_vendor",
                 "liblog",
                 "libc",
                 "libdl",
@@ -11655,7 +11636,7 @@ cc_prebuilt_binary {
             ],
             shared_libs: [
                 "libteecl",
-                "libuuid",
+                "libuuid_vendor",
                 "liblog",
                 "libc",
                 "libdl",

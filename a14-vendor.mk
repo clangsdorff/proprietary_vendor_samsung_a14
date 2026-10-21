@@ -278,6 +278,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/tee/driver/00000000-0000-0000-0000-564c544b4456:$(TARGET_COPY_OUT_VENDOR)/tee/driver/00000000-0000-0000-0000-564c544b4456
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio.common-util \
+    android.hardware.graphics.extension.composer3-V2-ndk \
     arm.graphics-V1-ndk \
     libGLES_mali \
     android.hardware.audio.effect@2.0-impl_stock \
@@ -384,7 +386,6 @@ PRODUCT_PACKAGES += \
     libsehbluetooth_audio_session_aidl \
     libsemnativecarrierfeature \
     libsensorlistener \
-    libsensorndkbridge \
     libserde \
     libsfp_sensor \
     libsfp_teegw \
@@ -401,7 +402,7 @@ PRODUCT_PACKAGES += \
     libuniapi \
     libuniplugin \
     libuuid \
-    libuuid \
+    libuuid_vendor \
     libvibratorutils \
     libvideobeauty.arcsoft \
     libvideobeauty_interface \
@@ -415,7 +416,7 @@ PRODUCT_PACKAGES += \
     libaudiosaplus_sec \
     libmysound \
     libmyspace \
-    libsamsungSoundbooster_plus \
+    libsamsungSoundbooster_plus_stock \
     libswdap \
     libswspatializer \
     vendor.samsung.hardware.biometrics.fingerprint-V1-ndk \
@@ -474,7 +475,6 @@ PRODUCT_PACKAGES += \
     libhwc2on1adapter \
     libhwc2onfbadapter \
     libimgproc_sw.unifunc@common \
-    libkeystore-engine-wifi-hidl \
     liboemcrypto \
     libremosaiclib \
     libril_sem \
@@ -493,8 +493,7 @@ PRODUCT_PACKAGES += \
     libstork_shared \
     libvkmanager_vendor \
     libvkservice \
-    libwifi-hal \
-    libwifi-system-iface \
+    libwifi-hal_vendor \
     nfc_nci_sec \
     service-listener-ext-aidl-V1-ndk \
     unihal_android \
@@ -599,7 +598,7 @@ PRODUCT_PACKAGES += \
     init.insmod \
     iod \
     main_abox \
-    secril_config_svc \
+    secril_config_svc_stock \
     slsi_wlan_udi_log \
     slsi_wlan_udi_log_decode \
     tzdaemon \
