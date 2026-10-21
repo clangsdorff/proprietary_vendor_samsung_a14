@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<records>
+<boot_file>/system/framework/services.jar</boot_file>
+<boot_file>/system/framework/oat/arm64/services.odex</boot_file>
+<boot_file>/system/framework/oat/arm64/semwifi-service.odex</boot_file>
+<boot_file>/vendor/lib64/egl/libGLES_mali.so</boot_file>
+<boot_file>/system/framework/framework-res.apk</boot_file>
+<boot_file>/system/framework/framework.jar</boot_file>
+<boot_file>/system/priv-app/TouchWizHome_2017/TouchWizHome_2017.apk</boot_file>
+<boot_file>/system/framework/arm64/boot-framework.oat</boot_file>
+<boot_file>/system/lib64/libhwui.so</boot_file>
+<boot_file>/system/lib64/libjpeg.so</boot_file>
+<boot_file>/system/framework/semwifi-service.jar</boot_file>
+<boot_file>/apex/com.android.art/lib64/libart.so</boot_file>
+<boot_file>/system/lib64/libc++.so</boot_file>
+<boot_file>/system/lib64/libGLESv2.so</boot_file>
+<boot_file>/apex/com.android.runtime/lib64/bionic/libc.so</boot_file>
+<boot_file>/system/bin/surfaceflinger</boot_file>
+<boot_file>/system/app/HoneyBoard/oat/arm64/HoneyBoard.odex</boot_file>
+</records>
