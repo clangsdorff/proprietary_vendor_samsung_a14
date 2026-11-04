@@ -12,10 +12,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin \
     vendor/samsung/a14/proprietary/vendor/etc/SoundBoosterParam.txt:$(TARGET_COPY_OUT_VENDOR)/etc/SoundBoosterParam.txt \
     vendor/samsung/a14/proprietary/vendor/etc/a2dpsink_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dpsink_audio_policy_configuration.xml \
-    vendor/samsung/a14/proprietary/vendor/etc/aidl/hfp/hfp_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/hfp/hfp_codec_capabilities.xml \
-    vendor/samsung/a14/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs \
     vendor/samsung/a14/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json \
-    vendor/samsung/a14/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs \
     vendor/samsung/a14/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json \
     vendor/samsung/a14/proprietary/vendor/etc/atrace/atrace_categories.txt:$(TARGET_COPY_OUT_VENDOR)/etc/atrace/atrace_categories.txt \
     vendor/samsung/a14/proprietary/vendor/etc/audio_board_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_board_info.xml \
@@ -42,20 +39,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/gps_debug.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps_debug.conf \
     vendor/samsung/a14/proprietary/vendor/etc/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hearing_aid_audio_policy_configuration.xml \
     vendor/samsung/a14/proprietary/vendor/etc/init.insmod.s5e3830.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.s5e3830.cfg \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.audio.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.graphics.composer@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@2.2-service.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.security.keymint-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.sensors-service-multihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors-service-multihal.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.thermal@2.0-service.exynos.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal@2.0-service.exynos.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.usb@1.3-service.coral.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.3-service.coral.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.wifi-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.wifi.supplicant-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi.supplicant-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/atrace_categories.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/atrace_categories.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/camera.unihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camera.unihal.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/dumpstate-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dumpstate-default.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/fingerprint_common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint_common.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/hostapd.android.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hostapd.android.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/init.baseband.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.baseband.rc \
@@ -71,7 +60,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/init.vendor.rilcommon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.rilcommon.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/init.vendor.sysfw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sysfw.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/lights-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lights-sec.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/pa_daemon_teegris.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pa_daemon_teegris.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/power-default-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/power-default-sec.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.hardware.media.c2@1.2-service.rc \
@@ -123,7 +111,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/permissions/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     vendor/samsung/a14/proprietary/vendor/etc/permissions/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     vendor/samsung/a14/proprietary/vendor/etc/permissions/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml \
-    vendor/samsung/a14/proprietary/vendor/etc/permissions/android.hardware.hardware_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml \
     vendor/samsung/a14/proprietary/vendor/etc/permissions/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
     vendor/samsung/a14/proprietary/vendor/etc/permissions/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     vendor/samsung/a14/proprietary/vendor/etc/permissions/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -278,21 +265,20 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/tee/driver/00000000-0000-0000-0000-564c544b4456:$(TARGET_COPY_OUT_VENDOR)/tee/driver/00000000-0000-0000-0000-564c544b4456
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.common-util \
     android.hardware.graphics.extension.composer3-V2-ndk \
     arm.graphics-V1-ndk \
     libGLES_mali \
-    android.hardware.audio.effect@2.0-impl_stock \
-    android.hardware.audio.effect@6.0-impl_stock \
-    android.hardware.audio@2.0-impl_stock \
-    android.hardware.audio@6.0-impl_stock \
-    android.hardware.gatekeeper@1.0-impl_stock \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@6.0-impl \
+    android.hardware.gatekeeper@1.0-impl \
     android.hardware.graphics.allocator@4.0-impl_stock \
     android.hardware.graphics.mapper@4.0-impl_stock \
-    audio.bluetooth.default_stock \
-    audio.primary.default_stock \
-    audio.r_submix.default_stock \
-    audio.usb.default_stock \
+    audio.bluetooth.default \
+    audio.primary.default \
+    audio.r_submix.default \
+    audio.usb.default \
     camera.s5e3830 \
     gatekeeper.s5e3830 \
     hwcomposer.s5e3830 \
@@ -317,7 +303,7 @@ PRODUCT_PACKAGES += \
     libHpr_RecGAE_cvFeature_v1.0.camera.samsung \
     libLocalTM_capture_core.camera.samsung \
     libLocalTM_wrapper.camera.samsung \
-    libOpenCL \
+    libOpenCL_stock \
     libOpenCv.camera.samsung \
     libSEF.quram \
     lib_SoundAlive_3DPosition_ver202 \
@@ -325,24 +311,14 @@ PRODUCT_PACKAGES += \
     lib_SoundAlive_play_plus_ver400 \
     lib_SoundBooster_ver1100 \
     libacryl \
-    libatomic_rust \
     libbeautyshot.arcsoft \
-    libbluetooth_audio_session_aidl \
-    libbt-vendor \
-    libbytemuck \
+    libbt-vendor_stock \
     libc2filterplugin \
     libcamera2ndk_vendor \
-    libcfg_if \
-    libcodec2_hidl@1.0 \
-    libcodec2_hidl@1.1 \
-    libcodec2_hidl_plugin \
-    libcodec2_simple_component \
-    libcodec2_soft_common \
     libcsc \
     libdisplayaiqe \
     libdisplaycolor_default \
     libdisplaycolorwrapper \
-    libdrm \
     libdrmresource \
     libegis_fp_normal_sensor_test \
     libexifa.camera.samsung \
@@ -357,7 +333,6 @@ PRODUCT_PACKAGES += \
     libexynosv4l2 \
     libface_landmark_lite.arcsoft \
     libfloatingfeature \
-    libgetrandom \
     libgf_in_system_lib \
     libgpudataproducer \
     libhdrwrapper \
@@ -366,7 +341,6 @@ PRODUCT_PACKAGES += \
     libhypervintf \
     libimagecodec_native.quram \
     libion_exynos \
-    liblibc \
     liblivefocus_preview_engine \
     liblivefocus_preview_interface \
     libmfb \
@@ -386,7 +360,6 @@ PRODUCT_PACKAGES += \
     libsehbluetooth_audio_session_aidl \
     libsemnativecarrierfeature \
     libsensorlistener \
-    libserde \
     libsfp_sensor \
     libsfp_teegw \
     libsimba.media.samsung \
@@ -396,19 +369,14 @@ PRODUCT_PACKAGES += \
     libsnamrwb \
     libspatializerparamstorage \
     libstagefright_foundation_vendor \
-    libstd \
     libsynaFpSensorTestNwd \
-    libteecl \
     libuniapi \
     libuniplugin \
-    libuuid \
     libuuid_vendor \
-    libvibratorutils \
     libvideobeauty.arcsoft \
     libvideobeauty_interface \
     libwpa_client \
     libwrappergps \
-    libdrmclearkeyplugin \
     sensors.grip \
     sensors.inputvirtual \
     sensors.sensorhub \
@@ -416,7 +384,7 @@ PRODUCT_PACKAGES += \
     libaudiosaplus_sec \
     libmysound \
     libmyspace \
-    libsamsungSoundbooster_plus_stock \
+    libsamsungSoundbooster_plus \
     libswdap \
     libswspatializer \
     vendor.samsung.hardware.biometrics.fingerprint-V1-ndk \
@@ -424,7 +392,7 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.bluetooth.audio-impl \
     vendor.samsung.hardware.hyper-V2-ndk \
     vendor.samsung.hardware.thermal@1.0 \
-    android.hardware.soundtrigger@2.0-impl_stock \
+    android.hardware.soundtrigger@2.0-impl \
     audio.primary.s5e3830 \
     libSamsungPostProcessConvertor \
     lib_SamsungRec_07010 \
@@ -434,10 +402,9 @@ PRODUCT_PACKAGES += \
     libaudio-ril \
     libaudioparamupdate \
     libaudioproxy \
-    libaudioroute \
     liblastaboxmsg \
     librecordalive \
-    android.hardware.bluetooth@1.0-impl_stock \
+    android.hardware.bluetooth@1.0-impl \
     android.hardware.gnss@2.1-impl_stock \
     camera.unihal.default \
     libsecaudiohal_aidl \
@@ -447,8 +414,6 @@ PRODUCT_PACKAGES += \
     libVendorSemDataProps \
     libVendorSemTelephonyProps \
     lib_samsung_profiler \
-    libcodec2_aidl \
-    libcodec2_hidl@1.2 \
     libcodec2_sec_aacdec \
     libcodec2_sec_aacenc \
     libcodec2_sec_amrnbdec \
@@ -470,15 +435,11 @@ PRODUCT_PACKAGES += \
     libfocuspeaking \
     libfocuspeaking.uniplugin@1.0 \
     libformatConverter.unifunc \
-    libgrallocusage \
     libhigh_dynamic_range_bokeh \
-    libhwc2on1adapter \
-    libhwc2onfbadapter \
     libimgproc_sw.unifunc@common \
     liboemcrypto \
     libremosaiclib \
     libril_sem \
-    librilutils \
     libsamsungcamerahal \
     libsamsungcamerahalutils \
     libsamsungcamerahwl_impl \
@@ -493,7 +454,7 @@ PRODUCT_PACKAGES += \
     libstork_shared \
     libvkmanager_vendor \
     libvkservice \
-    libwifi-hal_vendor \
+    libwifi-hal \
     nfc_nci_sec \
     service-listener-ext-aidl-V1-ndk \
     unihal_android \
@@ -517,7 +478,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio.channel-V1-ndk \
     vendor.samsung.hardware.radio.data-V1-ndk \
     vendor.samsung.hardware.radio.messaging-V1-ndk \
-    vendor.samsung.hardware.radio.network-V1-ndk \
     vendor.samsung.hardware.radio.sim-V1-ndk \
     vendor.samsung.hardware.security.fkeymaster-V1-ndk \
     vendor.samsung.hardware.security.widevine.keyprov-V1-ndk \
@@ -532,14 +492,8 @@ PRODUCT_PACKAGES += \
     com.google.android.widevine.nonupdatable \
     com.samsung.android.biometrics.fingerprint.signed \
     com.samsung.android.camera.unihal.signed \
-    android.hardware.sensors-multihal.xml \
     android.hardware.usb@1.3-service.coral.xml \
-    android.hardware.wifi-service.xml \
-    android.hardware.wifi.hostapd.xml \
-    android.hardware.wifi.supplicant.xml \
-    dumpstate-default.xml \
     lights-sec.xml \
-    memtrack.xml \
     power-samsung.xml \
     sec-nfc-service.xml \
     sec_c2_manifest_default1_hidl.xml \
@@ -560,20 +514,20 @@ PRODUCT_PACKAGES += \
     cbd \
     cld \
     hcgcd \
-    android.hardware.audio.service_stock \
-    android.hardware.bluetooth@1.0-service_stock \
+    android.hardware.audio.service \
+    android.hardware.bluetooth@1.0-service \
     android.hardware.dumpstate-service_stock \
-    android.hardware.gatekeeper@1.0-service_stock \
+    android.hardware.gatekeeper@1.0-service \
     android.hardware.graphics.allocator@4.0-service_stock \
-    android.hardware.graphics.composer@2.2-service_stock \
+    android.hardware.graphics.composer@2.2-service \
     android.hardware.lights-service.samsung_stock \
     android.hardware.memtrack-service.exynos_stock \
     android.hardware.power.samsung-service_stock \
-    android.hardware.security.keymint-service_stock \
-    android.hardware.sensors-service.multihal_stock \
+    android.hardware.security.keymint-service \
+    android.hardware.sensors-service.multihal \
     android.hardware.thermal@2.0-service.exynos_stock \
     android.hardware.usb@1.3-service.coral_stock \
-    android.hardware.wifi-service_stock \
+    android.hardware.wifi-service \
     gps \
     gpsd \
     hostapd_stock \
@@ -594,11 +548,11 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.vibrator-service \
     vendor.samsung.hardware.wifi-service \
     vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service \
-    wpa_supplicant_stock \
+    wpa_supplicant \
     init.insmod \
     iod \
     main_abox \
-    secril_config_svc_stock \
+    secril_config_svc \
     slsi_wlan_udi_log \
     slsi_wlan_udi_log_decode \
     tzdaemon \
