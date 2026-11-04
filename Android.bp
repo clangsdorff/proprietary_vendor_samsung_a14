@@ -584,7 +584,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.bluetooth.default",
+    name: "audio.bluetooth.erd3830",
     owner: "samsung",
     strip: {
         none: true,
@@ -592,17 +592,46 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/hw/audio.bluetooth.default.so",
+                "proprietary/vendor/lib/hw/audio.bluetooth.erd3830.so",
+            ],
+            shared_libs: [
+                "vendor.samsung.hardware.bluetooth.audio-V2-ndk",
+                "libsehbluetooth_audio_session_aidl",
+                "libaudioutils",
+                "libbase",
+                "libbinder_ndk",
+                "libcutils",
+                "libfmq",
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/hw/audio.bluetooth.default.so",
+                "proprietary/vendor/lib64/hw/audio.bluetooth.erd3830.so",
+            ],
+            shared_libs: [
+                "vendor.samsung.hardware.bluetooth.audio-V2-ndk",
+                "libsehbluetooth_audio_session_aidl",
+                "libaudioutils",
+                "libbase",
+                "libbinder_ndk",
+                "libcutils",
+                "libfmq",
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
     compile_multilib: "both",
-    check_elf_files: false,
     relative_install_path: "hw",
     prefer: true,
     soc_specific: true,
@@ -707,8 +736,8 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libaudioutils",
-                "libtinyalsa",
-                "libalsautils",
+                "libtinyalsa_sec",
+                "libalsautils_sec",
                 "libc++",
                 "libc",
                 "libm",
@@ -723,8 +752,8 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libaudioutils",
-                "libtinyalsa",
-                "libalsautils",
+                "libtinyalsa_sec",
+                "libalsautils_sec",
                 "libc++",
                 "libc",
                 "libm",
@@ -2260,6 +2289,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/lib_SoundAlive_play_plus_ver400.so",
             ],
             shared_libs: [
+                "liblog",
                 "libc",
                 "libm",
                 "libdl",
@@ -2345,6 +2375,49 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libion_exynos",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libalsautils_sec",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libalsautils_sec.so",
+            ],
+            shared_libs: [
+                "libaudioutils",
+                "libcutils",
+                "liblog",
+                "libtinyalsa_sec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libalsautils_sec.so",
+            ],
+            shared_libs: [
+                "libaudioutils",
+                "libcutils",
+                "liblog",
+                "libtinyalsa_sec",
                 "libc++",
                 "libc",
                 "libm",
@@ -2501,30 +2574,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcamera2ndk_vendor",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libcamera2ndk_vendor.so",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcamera2ndk_vendor.so",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -4461,7 +4510,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "libutils",
-                "libsensorndkbridge",
+                "libsensorndkbridge_sec",
                 "liblog",
                 "libc++",
                 "libc",
@@ -4476,8 +4525,53 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "libutils",
-                "libsensorndkbridge",
+                "libsensorndkbridge_sec",
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsensorndkbridge_sec",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libsensorndkbridge_sec.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libbinder_ndk",
+                "libutils",
+                "android.frameworks.sensorservice-V1-ndk",
+                "android.hardware.sensors-V3-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsensorndkbridge_sec.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libbinder_ndk",
+                "libutils",
+                "android.frameworks.sensorservice-V1-ndk",
+                "android.hardware.sensors-V3-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -4918,6 +5012,73 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libdl",
                 "libc",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libteecl",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libteecl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libteecl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libtinyalsa_sec",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libtinyalsa_sec.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtinyalsa_sec.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libdl",
             ],
         },
     },
@@ -5369,7 +5530,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "liblog",
-                "libtinyalsa",
+                "libtinyalsa_sec",
                 "libsecaudioinfo",
                 "libc++",
                 "libc",
@@ -5385,7 +5546,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "liblog",
-                "libtinyalsa",
+                "libtinyalsa_sec",
                 "libsecaudioinfo",
                 "libc++",
                 "libc",
@@ -5952,8 +6113,8 @@ cc_prebuilt_library_shared {
                 "libaudioutils",
                 "libaboxdump",
                 "liblastaboxmsg",
-                "libaudioroute",
-                "libtinyalsa",
+                "libaudioroute_sec",
+                "libtinyalsa_sec",
                 "libc++",
                 "libc",
                 "libm",
@@ -6086,11 +6247,11 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libcutils",
-                "libtinyalsa",
+                "libtinyalsa_sec",
                 "libutils",
                 "libhardware_legacy",
                 "libexpat",
-                "libaudioroute",
+                "libaudioroute_sec",
                 "libc++",
                 "libc",
                 "libm",
@@ -6146,8 +6307,8 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libutils",
-                "libtinyalsa",
-                "libaudioroute",
+                "libtinyalsa_sec",
+                "libaudioroute_sec",
                 "libc++",
                 "libc",
                 "libm",
@@ -6174,14 +6335,43 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libcutils",
-                "libtinyalsa",
+                "libtinyalsa_sec",
                 "libtinycompress",
                 "libaudioutils",
-                "libaudioroute",
-                "libalsautils",
+                "libaudioroute_sec",
+                "libalsautils_sec",
                 "libexpat",
                 "libSamsungPostProcessConvertor",
                 "libaudioparamupdate",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudioroute_sec",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libaudioroute_sec.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libexpat",
+                "liblog",
+                "libutils",
+                "libtinyalsa_sec",
                 "libc++",
                 "libc",
                 "libm",
@@ -7093,6 +7283,7 @@ cc_prebuilt_library_shared {
                 "libEGL",
                 "libGLESv2",
                 "liblog",
+                "libomp_vendor",
                 "libc",
             ],
         },
@@ -7331,6 +7522,29 @@ cc_prebuilt_library_shared {
                 "libm",
                 "libdl",
                 "liblog",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libomp_vendor",
+    stem: "libomp",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libomp.so",
+            ],
+            shared_libs: [
+                "libdl",
+                "libc",
             ],
         },
     },
@@ -7990,7 +8204,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libhardware",
                 "libgrallocusage",
-                "libsensorndkbridge",
+                "libsensorndkbridge_sec",
                 "libcamera_metadata",
                 "libsync",
                 "android.hardware.graphics.allocator@2.0",
@@ -8855,9 +9069,45 @@ prebuilt_apex {
 }
 
 prebuilt_etc_xml {
+    name: "android.hardware.sensors-multihal.samsung.xml",
+    owner: "samsung",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.sensors-multihal.samsung.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "android.hardware.usb@1.3-service.coral.xml",
     owner: "samsung",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.usb@1.3-service.coral.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "android.hardware.wifi-service.samsung.xml",
+    owner: "samsung",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi-service.samsung.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "android.hardware.wifi.hostapd.samsung.xml",
+    owner: "samsung",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.samsung.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "android.hardware.wifi.supplicant.samsung.xml",
+    owner: "samsung",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.samsung.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -9394,17 +9644,36 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.security.keymint-service",
+    name: "android.hardware.security.keymint-service.samsung",
     owner: "samsung",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.security.keymint-service",
+                "proprietary/vendor/bin/hw/android.hardware.security.keymint-service.samsung",
+            ],
+            shared_libs: [
+                "libskeymint10device",
+                "vendor.samsung.hardware.keymint-V2-ndk",
+                "android.hardware.security.keymint-V2-ndk",
+                "android.hardware.security.rkp-V2-ndk",
+                "android.hardware.security.sharedsecret-V1-ndk",
+                "android.hardware.security.secureclock-V1-ndk",
+                "libbase",
+                "libbinder_ndk",
+                "libcppbor",
+                "libcrypto",
+                "libkeymaster_portable",
+                "liblog",
+                "libpuresoftkeymasterdevice",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -9414,17 +9683,34 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.sensors-service.multihal",
+    name: "android.hardware.sensors-service.multihal.samsung",
     owner: "samsung",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.sensors-service.multihal",
+                "proprietary/vendor/bin/hw/android.hardware.sensors-service.multihal.samsung",
+            ],
+            shared_libs: [
+                "android.hardware.sensors@2.0-ScopedWakelock",
+                "android.hardware.sensors@2.0",
+                "android.hardware.sensors@2.1",
+                "android.hardware.sensors-V2-ndk",
+                "libbase",
+                "libcutils",
+                "libfmq",
+                "liblog",
+                "libpower",
+                "libutils",
+                "libbinder_ndk",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -9504,17 +9790,33 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.wifi-service",
+    name: "android.hardware.wifi-service.samsung",
     owner: "samsung",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.wifi-service",
+                "proprietary/vendor/bin/hw/android.hardware.wifi-service.samsung",
+            ],
+            shared_libs: [
+                "libbase",
+                "libbinder_ndk",
+                "libcutils",
+                "liblog",
+                "libnl",
+                "libutils",
+                "libwifi-hal",
+                "libwifi-system-iface",
+                "libxml2",
+                "vendor.samsung.hardware.wifi.nan-V1-ndk",
+                "android.hardware.wifi-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -10191,17 +10493,35 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "wpa_supplicant",
+    name: "wpa_supplicant.samsung",
     owner: "samsung",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/wpa_supplicant",
+                "proprietary/vendor/bin/hw/wpa_supplicant.samsung",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libcrypto",
+                "libssl",
+                "libkeystore-engine-wifi-hidl",
+                "libnl",
+                "android.hardware.wifi.supplicant-V3-ndk",
+                "vendor.samsung.hardware.wifi.supplicant-V1-ndk",
+                "android.system.keystore2-V1-ndk",
+                "libutils",
+                "libbase",
+                "libbinder_ndk",
+                "libsecnativefeature",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     strip: {
         none: true,
     },
