@@ -6606,40 +6606,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSamsngPowerHal",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libSamsngPowerHal.so",
-            ],
-            shared_libs: [
-                "android.hardware.common-V2-ndk",
-                "android.hardware.common.fmq-V1-ndk",
-                "android.hardware.power-V5-ndk",
-                "libbase",
-                "libbinder_ndk",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libfmq",
-                "libhypervintf",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libSecC2ComponentStore",
     owner: "samsung",
     strip: {
@@ -9123,15 +9089,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "power-samsung.xml",
-    owner: "samsung",
-    src: "proprietary/vendor/etc/vintf/manifest/power-samsung.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "sec-nfc-service.xml",
     owner: "samsung",
     src: "proprietary/vendor/etc/vintf/manifest/sec-nfc-service.xml",
@@ -9594,39 +9551,6 @@ cc_prebuilt_binary {
                 "libbase",
                 "libbinder_ndk",
                 "android.hardware.memtrack-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.power.samsung-service_stock",
-    stem: "android.hardware.power.samsung-service",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.power.samsung-service",
-            ],
-            shared_libs: [
-                "android.hardware.power-V5-ndk",
-                "libbase",
-                "libbinder_ndk",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libSamsngPowerHal",
                 "libc++",
                 "libc",
                 "libm",

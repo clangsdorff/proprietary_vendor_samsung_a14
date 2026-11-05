@@ -71,7 +71,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/lights-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lights-sec.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/pa_daemon_teegris.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pa_daemon_teegris.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/power-default-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/power-default-sec.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.hardware.media.c2@1.2-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/samsung.software.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.software.media.c2@1.0-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/sec-nfc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sec-nfc-service.rc \
@@ -423,7 +422,6 @@ PRODUCT_PACKAGES += \
     camera.unihal.default \
     libsecaudiohal_aidl \
     vendor.samsung.hardware.gnss@2.1-impl \
-    libSamsngPowerHal \
     libSecC2ComponentStore \
     libVendorSemDataProps \
     libVendorSemTelephonyProps \
@@ -513,7 +511,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd.samsung.xml \
     android.hardware.wifi.supplicant.samsung.xml \
     lights-sec.xml \
-    power-samsung.xml \
     sec-nfc-service.xml \
     sec_c2_manifest_default1_hidl.xml \
     secaudiohalaidl_manifest.xml \
@@ -541,7 +538,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.lights-service.samsung_stock \
     android.hardware.memtrack-service.exynos_stock \
-    android.hardware.power.samsung-service_stock \
     android.hardware.security.keymint-service.samsung \
     android.hardware.sensors-service.multihal.samsung \
     android.hardware.thermal@2.0-service.exynos_stock \
