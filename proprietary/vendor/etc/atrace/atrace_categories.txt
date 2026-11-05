@@ -1,2 +1,0 @@
-memory
- samsung/tracing_mark_write
