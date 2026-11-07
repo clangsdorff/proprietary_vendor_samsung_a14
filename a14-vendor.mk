@@ -38,7 +38,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/gps_debug.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps_debug.conf \
     vendor/samsung/a14/proprietary/vendor/etc/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hearing_aid_audio_policy_configuration.xml \
     vendor/samsung/a14/proprietary/vendor/etc/init.insmod.s5e3830.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.s5e3830.cfg \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.audio.service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service.rc \
@@ -395,8 +394,6 @@ PRODUCT_PACKAGES += \
     libswdap \
     libswspatializer \
     vendor.samsung.hardware.biometrics.fingerprint-V1-ndk \
-    vendor.samsung.hardware.bluetooth.audio-V2-ndk \
-    vendor.samsung.hardware.bluetooth.audio-impl \
     vendor.samsung.hardware.hyper-V2-ndk \
     vendor.samsung.hardware.thermal@1.0 \
     android.hardware.soundtrigger@2.0-impl \
@@ -508,7 +505,6 @@ PRODUCT_PACKAGES += \
     sec-nfc-service.xml \
     sec_c2_manifest_default1_hidl.xml \
     secaudiohalaidl_manifest.xml \
-    seh_bluetooth_audio.xml \
     vendor.samsung.hardware.biometrics.fingerprint-service.xml \
     vendor.samsung.hardware.camera.provider-service.xml \
     vendor.samsung.hardware.health-service.xml \
@@ -524,7 +520,6 @@ PRODUCT_PACKAGES += \
     cbd \
     cld \
     hcgcd \
-    android.hardware.audio.service \
     android.hardware.bluetooth@1.0-service \
     android.hardware.dumpstate-service_stock \
     android.hardware.gatekeeper@1.0-service \
