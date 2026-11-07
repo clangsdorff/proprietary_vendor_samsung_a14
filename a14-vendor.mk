@@ -394,6 +394,8 @@ PRODUCT_PACKAGES += \
     libswdap \
     libswspatializer \
     vendor.samsung.hardware.biometrics.fingerprint-V1-ndk \
+    vendor.samsung.hardware.bluetooth.audio-V2-ndk \
+    vendor.samsung.hardware.bluetooth.audio-impl \
     vendor.samsung.hardware.hyper-V2-ndk \
     vendor.samsung.hardware.thermal@1.0 \
     android.hardware.soundtrigger@2.0-impl \
