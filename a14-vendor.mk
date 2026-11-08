@@ -65,6 +65,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/lights-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lights-sec.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/memtrack.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/pa_daemon_teegris.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pa_daemon_teegris.rc \
+    vendor/samsung/a14/proprietary/vendor/etc/init/power-default-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/power-default-sec.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.hardware.media.c2@1.2-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/samsung.software.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.software.media.c2@1.0-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/sec-nfc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sec-nfc-service.rc \
@@ -76,6 +77,11 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.health-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.health-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc \
+    vendor/samsung/a14/proprietary/vendor/etc/init/hyper-default-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hyper-default-sec.rc \
+    vendor/samsung/a14/proprietary/vendor/etc/hyper/config_chipset.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_chipset.json \
+    vendor/samsung/a14/proprietary/vendor/etc/hyper/config_hyper_permission.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_hyper_permission.json \
+    vendor/samsung/a14/proprietary/vendor/etc/hyper/config_model.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_model.json \
+    vendor/samsung/a14/proprietary/vendor/etc/hyper/config_vendor.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_vendor.json \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.sysinput-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.sysinput-default.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.thermal-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.thermal-default.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.vibrator-default.rc \
@@ -416,6 +422,7 @@ PRODUCT_PACKAGES += \
     camera.unihal.default \
     libsecaudiohal_aidl \
     vendor.samsung.hardware.gnss@2.1-impl \
+    libSamsngPowerHal \
     libSecC2ComponentStore \
     libVendorSemDataProps \
     libVendorSemTelephonyProps \
@@ -504,6 +511,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd.samsung.xml \
     android.hardware.wifi.supplicant.samsung.xml \
     lights-sec.xml \
+    power-samsung.xml \
     sec-nfc-service.xml \
     sec_c2_manifest_default1_hidl.xml \
     secaudiohalaidl_manifest.xml \
@@ -529,6 +537,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.lights-service.samsung_stock \
     android.hardware.memtrack-service.exynos_stock \
+    android.hardware.power.samsung-service_stock \
     android.hardware.security.keymint-service.samsung \
     android.hardware.sensors-service.multihal.samsung \
     android.hardware.thermal@2.0-service.exynos_stock \
@@ -548,6 +557,9 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.gnss@2.1-service \
     vendor.samsung.hardware.health-service \
     vendor.samsung.hardware.security.widevine.keyprov-service \
+    libSamsungHyper \
+    vendor.samsung.hardware.hyper-service \
+    hyper-default-sec.xml \
     vendor.samsung.hardware.sysinput-service \
     vendor.samsung.hardware.thermal-service \
     vendor.samsung.hardware.vibrator-service \
