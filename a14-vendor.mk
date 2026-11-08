@@ -80,7 +80,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/hyper/config_vendor.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_vendor.json \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.sysinput-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.sysinput-default.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.thermal-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.thermal-default.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.vibrator-default.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.wifi-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.wifi-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.rilchip.slsi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rilchip.slsi.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rild.rc \
@@ -485,7 +484,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.security.widevine.keyprov-V1-ndk \
     vendor.samsung.hardware.sysinput-V2-ndk \
     vendor.samsung.hardware.thermal-V1-ndk \
-    vendor.samsung.hardware.vibrator-V5-ndk \
     vendor.samsung.hardware.wifi-V1-ndk \
     vendor.samsung.hardware.wifi.hostapd-V1-ndk \
     vendor.samsung.hardware.wifi.nan-V1-ndk \
@@ -511,7 +509,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.sehradio_manifest_2_202404.xml \
     vendor.samsung.hardware.sysinput-default.xml \
     vendor.samsung.hardware.thermal-default.xml \
-    vendor.samsung.hardware.vibrator-default.xml \
     vendor.samsung.hardware.wifi-service.xml \
     cbd \
     cld \
@@ -544,7 +541,6 @@ PRODUCT_PACKAGES += \
     hyper-default-sec.xml \
     vendor.samsung.hardware.sysinput-service \
     vendor.samsung.hardware.thermal-service \
-    vendor.samsung.hardware.vibrator-service \
     vendor.samsung.hardware.wifi-service \
     vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service \
     wpa_supplicant.samsung \
