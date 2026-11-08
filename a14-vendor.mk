@@ -16,8 +16,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json \
     vendor/samsung/a14/proprietary/vendor/etc/audio_board_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_board_info.xml \
     vendor/samsung/a14/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    vendor/samsung/a14/proprietary/vendor/etc/audio_effects_sec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_sec.xml \
-    vendor/samsung/a14/proprietary/vendor/etc/audio_effects_spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_spatializer.xml \
     vendor/samsung/a14/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     vendor/samsung/a14/proprietary/vendor/etc/audio_policy_configuration_sec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_sec.xml \
     vendor/samsung/a14/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -381,12 +379,6 @@ PRODUCT_PACKAGES += \
     sensors.inputvirtual \
     sensors.sensorhub \
     libaudioeffectoffload \
-    libaudiosaplus_sec \
-    libmysound \
-    libmyspace \
-    libsamsungSoundbooster_plus \
-    libswdap \
-    libswspatializer \
     vendor.samsung.hardware.biometrics.fingerprint-V1-ndk \
     vendor.samsung.hardware.bluetooth.audio-V2-ndk \
     vendor.samsung.hardware.bluetooth.audio-impl \
