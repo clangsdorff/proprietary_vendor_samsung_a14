@@ -1,4 +1,0 @@
-service vendor.light-samsung /vendor/bin/hw/android.hardware.lights-service.samsung
-    class hal
-    user system
-    group system
