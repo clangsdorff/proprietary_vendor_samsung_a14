@@ -278,7 +278,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.graphics.allocator@4.0-impl_stock \
     android.hardware.graphics.mapper@4.0-impl_stock \
-    audio.bluetooth.erd3830 \
     audio.primary.default \
     camera.s5e3830 \
     gatekeeper.s5e3830 \
