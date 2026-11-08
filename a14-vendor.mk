@@ -277,17 +277,11 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.extension.composer3-V2-ndk \
     arm.graphics-V1-ndk \
     libGLES_mali \
-    android.hardware.audio.effect@2.0-impl \
-    android.hardware.audio.effect@6.0-impl \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio@6.0-impl \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.graphics.allocator@4.0-impl_stock \
     android.hardware.graphics.mapper@4.0-impl_stock \
     audio.bluetooth.erd3830 \
     audio.primary.default \
-    audio.r_submix.default \
-    audio.usb.default \
     camera.s5e3830 \
     gatekeeper.s5e3830 \
     hwcomposer.s5e3830 \
