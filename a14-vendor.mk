@@ -74,7 +74,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.biometrics.fingerprint-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.health-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.health-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/hyper-default-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hyper-default-sec.rc \
@@ -478,7 +477,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.camera.provider-V1-ndk \
     vendor.samsung.hardware.gnss@2.0 \
     vendor.samsung.hardware.gnss@2.1 \
-    vendor.samsung.hardware.health-V1-ndk \
     vendor.samsung.hardware.keymint-V2-ndk \
     vendor.samsung.hardware.nfc_aidl-V1-ndk \
     vendor.samsung.hardware.radio-V1-ndk \
@@ -511,7 +509,6 @@ PRODUCT_PACKAGES += \
     secaudiohalaidl_manifest.xml \
     vendor.samsung.hardware.biometrics.fingerprint-service.xml \
     vendor.samsung.hardware.camera.provider-service.xml \
-    vendor.samsung.hardware.health-service.xml \
     vendor.samsung.hardware.radio.exclude.slsi.xml \
     vendor.samsung.hardware.radio_manifest_2_202404.xml \
     vendor.samsung.hardware.security.fkeymaster-service.xml \
@@ -549,7 +546,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.biometrics.fingerprint-service \
     vendor.samsung.hardware.camera.provider-service_64 \
     vendor.samsung.hardware.gnss@2.1-service \
-    vendor.samsung.hardware.health-service \
     vendor.samsung.hardware.security.widevine.keyprov-service \
     libSamsungHyper \
     vendor.samsung.hardware.hyper-service \
