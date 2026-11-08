@@ -44,7 +44,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.graphics.composer@2.2-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@2.2-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.security.keymint-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.sensors-service-multihal.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors-service-multihal.samsung.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.thermal@2.0-service.exynos.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal@2.0-service.exynos.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.wifi-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.wifi.supplicant-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi.supplicant-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/camera.unihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camera.unihal.rc \
@@ -527,7 +526,6 @@ PRODUCT_PACKAGES += \
     android.hardware.power.samsung-service_stock \
     android.hardware.security.keymint-service.samsung \
     android.hardware.sensors-service.multihal.samsung \
-    android.hardware.thermal@2.0-service.exynos_stock \
     android.hardware.wifi-service.samsung \
     gps \
     gpsd \

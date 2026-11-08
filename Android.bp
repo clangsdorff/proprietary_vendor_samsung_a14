@@ -9187,40 +9187,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.thermal@2.0-service.exynos_stock",
-    stem: "android.hardware.thermal@2.0-service.exynos",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.thermal@2.0-service.exynos",
-            ],
-            shared_libs: [
-                "libbase",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libhardware",
-                "android.hardware.thermal@2.0",
-                "android.hardware.thermal@1.0",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "android.hardware.wifi-service.samsung",
     owner: "samsung",
     target: {
