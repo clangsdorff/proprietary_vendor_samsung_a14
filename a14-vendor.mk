@@ -47,7 +47,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.wifi-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.wifi.supplicant-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi.supplicant-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/camera.unihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camera.unihal.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/dumpstate-default.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dumpstate-default.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/fingerprint_common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint_common.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/hostapd.android.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hostapd.android.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/init.baseband.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.baseband.rc \
@@ -518,7 +517,6 @@ PRODUCT_PACKAGES += \
     cld \
     hcgcd \
     android.hardware.bluetooth@1.0-service \
-    android.hardware.dumpstate-service_stock \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.graphics.allocator@4.0-service_stock \
     android.hardware.graphics.composer@2.2-service \
