@@ -444,8 +444,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.sehradio_manifest_2_202404.xml \
     vendor.samsung.hardware.sysinput-default.xml \
     vendor.samsung.hardware.thermal-default.xml \
-    cbd \
-    cld \
     hcgcd \
     android.hardware.bluetooth@1.0-service \
     android.hardware.gatekeeper@1.0-service \
