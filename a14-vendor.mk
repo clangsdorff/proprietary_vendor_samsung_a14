@@ -478,7 +478,6 @@ PRODUCT_PACKAGES += \
     init.insmod \
     iod \
     main_abox \
-    secril_config_svc \
     slsi_wlan_udi_log \
     slsi_wlan_udi_log_decode \
     tzdaemon \
