@@ -7806,15 +7806,6 @@ prebuilt_apex {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.sensors-multihal.samsung.xml",
-    owner: "samsung",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.sensors-multihal.samsung.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "android.hardware.wifi-service.samsung.xml",
     owner: "samsung",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi-service.samsung.xml",
@@ -8246,43 +8237,6 @@ cc_prebuilt_binary {
                 "liblog",
                 "libpuresoftkeymasterdevice",
                 "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.sensors-service.multihal.samsung",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.sensors-service.multihal.samsung",
-            ],
-            shared_libs: [
-                "android.hardware.sensors@2.0-ScopedWakelock",
-                "android.hardware.sensors@2.0",
-                "android.hardware.sensors@2.1",
-                "android.hardware.sensors-V2-ndk",
-                "libbase",
-                "libcutils",
-                "libfmq",
-                "liblog",
-                "libpower",
-                "libutils",
-                "libbinder_ndk",
-                "libhidlbase",
                 "libc++",
                 "libc",
                 "libm",
