@@ -4870,45 +4870,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libwpa_client",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libwpa_client.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libwpa_client.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libwrappergps",
     owner: "samsung",
     strip: {
@@ -7588,81 +7549,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.samsung.hardware.wifi.hostapd-V1-ndk",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.samsung.hardware.wifi.hostapd-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.samsung.hardware.wifi.nan-V1-ndk",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.samsung.hardware.wifi.nan-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.samsung.hardware.wifi.supplicant-V1-ndk",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.samsung.hardware.wifi.supplicant-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0",
     owner: "samsung",
     strip: {
@@ -7711,33 +7597,6 @@ prebuilt_apex {
     owner: "samsung",
     src: "proprietary/vendor/apex/com.samsung.android.camera.unihal.signed.apex",
     filename: "com.samsung.android.camera.unihal.signed.apex",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "android.hardware.wifi-service.samsung.xml",
-    owner: "samsung",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi-service.samsung.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "android.hardware.wifi.hostapd.samsung.xml",
-    owner: "samsung",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.samsung.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "android.hardware.wifi.supplicant.samsung.xml",
-    owner: "samsung",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.samsung.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
     soc_specific: true,
 }
 
@@ -8080,42 +7939,6 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "android.hardware.wifi-service.samsung",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.wifi-service.samsung",
-            ],
-            shared_libs: [
-                "libbase",
-                "libbinder_ndk",
-                "libcutils",
-                "liblog",
-                "libnl",
-                "libutils",
-                "libwifi-hal",
-                "libwifi-system-iface",
-                "libxml2",
-                "vendor.samsung.hardware.wifi.nan-V1-ndk",
-                "android.hardware.wifi-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
 sh_binary {
     name: "gps",
     owner: "samsung",
@@ -8143,43 +7966,6 @@ cc_prebuilt_binary {
                 "libz",
                 "libdl",
                 "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "hostapd_stock",
-    stem: "hostapd",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/hostapd",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libcrypto",
-                "libssl",
-                "libnl",
-                "android.hardware.wifi.hostapd-V2-ndk",
-                "android.hardware.wifi.common-V1-ndk",
-                "libbase",
-                "libutils",
-                "libbinder_ndk",
-                "vendor.samsung.hardware.wifi.hostapd-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
             ],
         },
     },
@@ -8578,44 +8364,6 @@ cc_prebuilt_binary {
                 "libExynosHWCService",
                 "libion",
                 "libdrm",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "wpa_supplicant.samsung",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/wpa_supplicant.samsung",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libcrypto",
-                "libssl",
-                "libkeystore-engine-wifi-hidl",
-                "libnl",
-                "android.hardware.wifi.supplicant-V3-ndk",
-                "vendor.samsung.hardware.wifi.supplicant-V1-ndk",
-                "android.system.keystore2-V1-ndk",
-                "libutils",
-                "libbase",
-                "libbinder_ndk",
-                "libsecnativefeature",
                 "libc++",
                 "libc",
                 "libm",
