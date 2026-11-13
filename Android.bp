@@ -8009,35 +8009,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.memtrack-service.exynos_stock",
-    stem: "android.hardware.memtrack-service.exynos",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.memtrack-service.exynos",
-            ],
-            shared_libs: [
-                "libbase",
-                "libbinder_ndk",
-                "android.hardware.memtrack-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "android.hardware.power.samsung-service_stock",
     stem: "android.hardware.power.samsung-service",
     owner: "samsung",
