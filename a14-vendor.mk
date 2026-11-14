@@ -36,7 +36,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hearing_aid_audio_policy_configuration.xml \
     vendor/samsung/a14/proprietary/vendor/etc/init.insmod.s5e3830.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.s5e3830.cfg \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.graphics.composer@2.2-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@2.2-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.security.keymint-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/camera.unihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camera.unihal.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/fingerprint_common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint_common.rc \
@@ -414,7 +413,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.thermal-default.xml \
     hcgcd \
     android.hardware.graphics.allocator@4.0-service_stock \
-    android.hardware.graphics.composer@2.2-service \
     android.hardware.power.samsung-service_stock \
     android.hardware.security.keymint-service.samsung \
     gps \
