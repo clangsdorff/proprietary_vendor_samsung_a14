@@ -7463,36 +7463,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.graphics.allocator@4.0-service_stock",
-    stem: "android.hardware.graphics.allocator@4.0-service",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.graphics.allocator@4.0-service",
-            ],
-            shared_libs: [
-                "android.hardware.graphics.allocator@4.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "android.hardware.security.keymint-service.samsung",
     owner: "samsung",
     target: {
