@@ -47,7 +47,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/pa_daemon_teegris.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pa_daemon_teegris.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/secaudiohalaidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/secaudiohalaidl.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/teegris.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/teegris.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.biometrics.fingerprint-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc \
@@ -379,10 +378,8 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.sysinput-V2-ndk \
     vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0 \
     com.google.android.widevine.nonupdatable \
-    com.samsung.android.biometrics.fingerprint.signed \
     com.samsung.android.camera.unihal.signed \
     secaudiohalaidl_manifest.xml \
-    vendor.samsung.hardware.biometrics.fingerprint-service.xml \
     vendor.samsung.hardware.camera.provider-service.xml \
     vendor.samsung.hardware.radio.exclude.slsi.xml \
     vendor.samsung.hardware.radio_manifest_2_202404.xml \
@@ -398,7 +395,6 @@ PRODUCT_PACKAGES += \
     mfgloader \
     rild \
     secaudiohalaidl \
-    vendor.samsung.hardware.biometrics.fingerprint-service \
     vendor.samsung.hardware.camera.provider-service_64 \
     vendor.samsung.hardware.security.widevine.keyprov-service \
     vendor.samsung.hardware.sysinput-service \

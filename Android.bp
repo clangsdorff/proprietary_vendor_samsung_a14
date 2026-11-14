@@ -7291,14 +7291,6 @@ prebuilt_apex {
 }
 
 prebuilt_apex {
-    name: "com.samsung.android.biometrics.fingerprint.signed",
-    owner: "samsung",
-    src: "proprietary/vendor/apex/com.samsung.android.biometrics.fingerprint.signed.apex",
-    filename: "com.samsung.android.biometrics.fingerprint.signed.apex",
-    soc_specific: true,
-}
-
-prebuilt_apex {
     name: "com.samsung.android.camera.unihal.signed",
     owner: "samsung",
     src: "proprietary/vendor/apex/com.samsung.android.camera.unihal.signed.apex",
@@ -7311,15 +7303,6 @@ prebuilt_etc_xml {
     name: "secaudiohalaidl_manifest.xml",
     owner: "samsung",
     src: "proprietary/vendor/etc/vintf/manifest/secaudiohalaidl_manifest.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.samsung.hardware.biometrics.fingerprint-service.xml",
-    owner: "samsung",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -7593,33 +7576,6 @@ cc_prebuilt_binary {
                 "libbase",
                 "libaudioutils",
                 "libsecaudiohal_aidl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.samsung.hardware.biometrics.fingerprint-service",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint-service",
-            ],
-            shared_libs: [
-                "libbase",
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
