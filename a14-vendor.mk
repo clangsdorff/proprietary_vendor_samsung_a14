@@ -46,7 +46,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/init.vendor.onebinary.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.onebinary.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/init.vendor.sysfw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sysfw.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/pa_daemon_teegris.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pa_daemon_teegris.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/power-default-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/power-default-sec.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.hardware.media.c2@1.2-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/sec-nfc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sec-nfc-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/secaudiohalaidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/secaudiohalaidl.rc \
@@ -55,11 +54,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/hyper-default-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hyper-default-sec.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/hyper/config_chipset.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_chipset.json \
-    vendor/samsung/a14/proprietary/vendor/etc/hyper/config_hyper_permission.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_hyper_permission.json \
-    vendor/samsung/a14/proprietary/vendor/etc/hyper/config_model.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_model.json \
-    vendor/samsung/a14/proprietary/vendor/etc/hyper/config_vendor.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_vendor.json \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.sysinput-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.sysinput-default.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.thermal-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.thermal-default.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.rilchip.slsi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rilchip.slsi.rc \
@@ -337,7 +331,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl_stock \
     camera.unihal.default \
     libsecaudiohal_aidl \
-    libSamsngPowerHal \
     libVendorSemDataProps \
     libVendorSemTelephonyProps \
     lib_samsung_profiler \
@@ -399,7 +392,6 @@ PRODUCT_PACKAGES += \
     com.google.android.widevine.nonupdatable \
     com.samsung.android.biometrics.fingerprint.signed \
     com.samsung.android.camera.unihal.signed \
-    power-samsung.xml \
     sec-nfc-service.xml \
     secaudiohalaidl_manifest.xml \
     vendor.samsung.hardware.biometrics.fingerprint-service.xml \
@@ -413,7 +405,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.thermal-default.xml \
     hcgcd \
     android.hardware.graphics.allocator@4.0-service_stock \
-    android.hardware.power.samsung-service_stock \
     android.hardware.security.keymint-service.samsung \
     gps \
     gpsd \
@@ -426,9 +417,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.biometrics.fingerprint-service \
     vendor.samsung.hardware.camera.provider-service_64 \
     vendor.samsung.hardware.security.widevine.keyprov-service \
-    libSamsungHyper \
-    vendor.samsung.hardware.hyper-service \
-    hyper-default-sec.xml \
     vendor.samsung.hardware.sysinput-service \
     vendor.samsung.hardware.thermal-service \
     vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service \
