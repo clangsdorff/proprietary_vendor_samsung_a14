@@ -201,7 +201,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl_stock \
     audio.primary.default \
     camera.s5e3830 \
-    gatekeeper.s5e3830 \
     hwcomposer.s5e3830 \
     vulkan.mali \
     libBeauty_v4.camera.samsung \
