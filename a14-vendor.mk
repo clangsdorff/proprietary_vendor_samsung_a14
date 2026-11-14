@@ -35,7 +35,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/gps_debug.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps_debug.conf \
     vendor/samsung/a14/proprietary/vendor/etc/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hearing_aid_audio_policy_configuration.xml \
     vendor/samsung/a14/proprietary/vendor/etc/init.insmod.s5e3830.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.s5e3830.cfg \
-    vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.graphics.composer@2.2-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@2.2-service.samsung.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/android.hardware.security.keymint-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.samsung.rc \
@@ -211,7 +210,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.extension.composer3-V2-ndk \
     arm.graphics-V1-ndk \
     libGLES_mali \
-    android.hardware.gatekeeper@1.0-impl \
     android.hardware.graphics.allocator@4.0-impl_stock \
     android.hardware.graphics.mapper@4.0-impl_stock \
     audio.primary.default \
@@ -415,7 +413,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.sysinput-default.xml \
     vendor.samsung.hardware.thermal-default.xml \
     hcgcd \
-    android.hardware.gatekeeper@1.0-service \
     android.hardware.graphics.allocator@4.0-service_stock \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.power.samsung-service_stock \
