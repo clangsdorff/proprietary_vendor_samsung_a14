@@ -7625,42 +7625,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "samsung.hardware.media.c2@1.2-service",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/samsung.hardware.media.c2@1.2-service",
-            ],
-            shared_libs: [
-                "android.hardware.media.c2@1.2",
-                "libcodec2_hidl@1.2",
-                "libhidlbase",
-                "libavservices_minijail",
-                "libbinder",
-                "libbinder_ndk",
-                "libcodec2_vndk",
-                "libstagefright_xmlparser",
-                "liblog",
-                "libutils",
-                "libExynosC2ComponentStore",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "sec.android.hardware.nfc-service",
     owner: "samsung",
     target: {
