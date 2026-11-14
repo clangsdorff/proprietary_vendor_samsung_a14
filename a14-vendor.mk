@@ -45,7 +45,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/init/init.vendor.onebinary.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.onebinary.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/init.vendor.sysfw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sysfw.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/pa_daemon_teegris.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pa_daemon_teegris.rc \
-    vendor/samsung/a14/proprietary/vendor/etc/init/sec-nfc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sec-nfc-service.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/secaudiohalaidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/secaudiohalaidl.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/teegris.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/teegris.rc \
     vendor/samsung/a14/proprietary/vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.biometrics.fingerprint-service.rc \
@@ -382,7 +381,6 @@ PRODUCT_PACKAGES += \
     com.google.android.widevine.nonupdatable \
     com.samsung.android.biometrics.fingerprint.signed \
     com.samsung.android.camera.unihal.signed \
-    sec-nfc-service.xml \
     secaudiohalaidl_manifest.xml \
     vendor.samsung.hardware.biometrics.fingerprint-service.xml \
     vendor.samsung.hardware.camera.provider-service.xml \
@@ -399,7 +397,6 @@ PRODUCT_PACKAGES += \
     macloader \
     mfgloader \
     rild \
-    sec.android.hardware.nfc-service \
     secaudiohalaidl \
     vendor.samsung.hardware.biometrics.fingerprint-service \
     vendor.samsung.hardware.camera.provider-service_64 \

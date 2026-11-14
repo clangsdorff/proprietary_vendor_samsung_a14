@@ -7306,14 +7306,6 @@ prebuilt_apex {
     soc_specific: true,
 }
 
-prebuilt_etc_xml {
-    name: "sec-nfc-service.xml",
-    owner: "samsung",
-    src: "proprietary/vendor/etc/vintf/manifest/sec-nfc-service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
 
 prebuilt_etc_xml {
     name: "secaudiohalaidl_manifest.xml",
@@ -7568,40 +7560,6 @@ cc_prebuilt_binary {
                 "libcutils",
                 "liblog",
                 "libril_sem",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "sec.android.hardware.nfc-service",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/sec.android.hardware.nfc-service",
-            ],
-            shared_libs: [
-                "nfc_nci_sec",
-                "android.hardware.nfc-V1-ndk",
-                "vendor.samsung.hardware.nfc_aidl-V1-ndk",
-                "libbase",
-                "libhardware",
-                "liblog",
-                "libutils",
-                "libcrypto",
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
