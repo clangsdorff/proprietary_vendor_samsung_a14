@@ -415,7 +415,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service \
     init.insmod \
     iod \
-    main_abox \
     slsi_wlan_udi_log \
     slsi_wlan_udi_log_decode \
     tzdaemon \
