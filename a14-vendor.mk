@@ -81,7 +81,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/seccomp_policy/mediaextractor_sec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor_sec.policy \
     vendor/samsung/a14/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/samsung/a14/proprietary/vendor/etc/situation_audio_policy_volumes_sec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/situation_audio_policy_volumes_sec.xml \
-    vendor/samsung/a14/proprietary/vendor/etc/somxreg.conf:$(TARGET_COPY_OUT_VENDOR)/etc/somxreg.conf \
     vendor/samsung/a14/proprietary/vendor/etc/str/str_preference_data.dat:$(TARGET_COPY_OUT_VENDOR)/etc/str/str_preference_data.dat \
     vendor/samsung/a14/proprietary/vendor/etc/sysconfig/vendor-apex-allowlist.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/vendor-apex-allowlist.xml \
     vendor/samsung/a14/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
@@ -345,7 +344,6 @@ PRODUCT_PACKAGES += \
     libsecaudiohalproxy_vendor \
     libskeymint10device \
     libskeymint_cli \
-    libsomxcmn \
     libstork_shared \
     libvkmanager_vendor \
     libvkservice \
