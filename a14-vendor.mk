@@ -23,7 +23,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/bluetooth/bt_did.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_did.conf \
     vendor/samsung/a14/proprietary/vendor/etc/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     vendor/samsung/a14/proprietary/vendor/etc/btcon.json:$(TARGET_COPY_OUT_VENDOR)/etc/btcon.json \
-    vendor/samsung/a14/proprietary/vendor/etc/dax3_media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dax3_media_codecs_dolby_audio.xml \
     vendor/samsung/a14/proprietary/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     vendor/samsung/a14/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/samsung/a14/proprietary/vendor/etc/dpolicy:$(TARGET_COPY_OUT_VENDOR)/etc/dpolicy \
@@ -60,7 +59,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/etc/locale/plmn_delta_zh-rCN.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rCN.bin \
     vendor/samsung/a14/proprietary/vendor/etc/locale/plmn_delta_zh-rHK.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rHK.bin \
     vendor/samsung/a14/proprietary/vendor/etc/locale/plmn_delta_zh-rTW.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rTW.bin \
-    vendor/samsung/a14/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/samsung/a14/proprietary/vendor/etc/mixer_gains.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_gains.xml \
     vendor/samsung/a14/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     vendor/samsung/a14/proprietary/vendor/etc/mtu-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtu-conf.xml \
