@@ -361,60 +361,8 @@ on post-fs-data
 # setup cgroup freezer for freecess
     mkdir /dev/freezer
     mount cgroup none /dev/freezer freezer
-    mkdir /dev/freezer/frozen
-    mkdir /dev/freezer/thaw
-    write /dev/freezer/frozen/freezer.state FROZEN
-    write /dev/freezer/thaw/freezer.state THAWED
-
-# MARs for freecess
-    chown system system /dev/freezer
-    chown system system /dev/freezer/frozen
-    chown system system /dev/freezer/frozen/tasks
-    chown system system /dev/freezer/frozen/cgroup.procs
-    chown system system /dev/freezer/frozen/freezer.state
-    chown system system /dev/freezer/thaw
-    chown system system /dev/freezer/thaw/tasks
-    chown system system /dev/freezer/thaw/cgroup.procs
-
-# MARs for freecess
-    chmod 0644 /dev/freezer/frozen/tasks
-    chmod 0644 /dev/freezer/frozen/cgroup.procs
-    chmod 0644 /dev/freezer/frozen/freezer.state
-    chmod 0644 /dev/freezer/thaw/tasks
-    chmod 0644 /dev/freezer/thaw/cgroup.procs
-
-# SDHMS Slowdown : Freezer
-    mkdir /dev/freezer/abnormal
-    write /dev/freezer/abnormal/freezer.state THAWED
-    chown system system /dev/freezer/abnormal
-    chown system system /dev/freezer/abnormal/tasks
-    chown system system /dev/freezer/abnormal/cgroup.procs
-    chown system system /dev/freezer/abnormal/freezer.state
-    chmod 0644 /dev/freezer/abnormal/tasks
-    chmod 0644 /dev/freezer/abnormal/cgroup.procs
-    chmod 0644 /dev/freezer/abnormal/freezer.state
 
 on boot
-    # SDHMS Slowdown : Cpuset
-    mkdir /dev/cpuset/abnormal
-    write /dev/cpuset/abnormal/cpus 0-2
-    copy /dev/cpuset/mems /dev/cpuset/abnormal/mems
-    chown system system /dev/cpuset/abnormal
-    chown system system /dev/cpuset/abnormal/tasks
-    chown system system /dev/cpuset/abnormal/cpus
-    chmod 0664 /dev/cpuset/abnormal/tasks
-    chmod 0664 /dev/cpuset/abnormal/cpus
-
-    mkdir /dev/cpuset/moderate
-    write /dev/cpuset/moderate/cpus 0-6
-    copy /dev/cpuset/mems /dev/cpuset/moderate/mems
-
-    chown system system /dev/cpuset/moderate
-    chown system system /dev/cpuset/moderate/tasks
-    chown system system /dev/cpuset/moderate/cpus
-    chmod 0664 /dev/cpuset/moderate/tasks
-    chmod 0664 /dev/cpuset/moderate/cpus
-
     setprop wifi.interface wlan0
     write /proc/sys/vm/min_free_order_shift 4
 
