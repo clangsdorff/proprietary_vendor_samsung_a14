@@ -224,20 +224,6 @@
 /dev/umts_ciq*              0660   system     system_ext_bridge_rw 
 
 /dev/block/platform/12100000.dwmmc0/by-name/frp 0660   root     system
-# interactive governor parameters
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_rate			0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_slack			0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/min_sample_time		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/hispeed_freq		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/target_loads		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/go_hispeed_load		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/above_hispeed_delay		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/boost			0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/boostpulse			0200	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/input_boost			0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/boostpulse_duration		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/io_is_busy			0660	system	system
-
 # Vision
 /dev/vertex0             0660   cameraserver   camera
 /dev/vertex1             0660   media      media
@@ -282,4 +268,3 @@
 
 # PROCA dev config
 /dev/proca_config         0440   system     system
-
