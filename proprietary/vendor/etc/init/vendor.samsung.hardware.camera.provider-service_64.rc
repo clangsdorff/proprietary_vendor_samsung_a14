@@ -6,6 +6,7 @@ service sec-camera-provider /vendor/bin/hw/vendor.samsung.hardware.camera.provid
     ioprio rt 4
     capabilities SYS_NICE BLOCK_SUSPEND
     task_profiles CameraServicePerformance CameraServiceCapacity MaxIoPriority
+    onrestart write /sys/devices/platform/ems/emstune/req_mode 0
 
 on boot
     mkdir /data/vendor/postprocess/ 0770 camera vendor_secdir
