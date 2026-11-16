@@ -301,7 +301,6 @@ PRODUCT_PACKAGES += \
     libscaler_sw.unifunc \
     libsec-ril \
     libsec2lsi_conversion \
-    libsecaudiohalproxy_vendor \
     libskeymint10device \
     libskeymint_cli \
     libstork_shared \
@@ -309,7 +308,6 @@ PRODUCT_PACKAGES += \
     libvkservice \
     libwifi-hal \
     nfc_nci_sec \
-    service-listener-ext-aidl-V1-ndk \
     unihal_android \
     unihal_cutils \
     unihal_entry \

@@ -6092,35 +6092,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsecaudiohalproxy_vendor",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsecaudiohalproxy_vendor.so",
-            ],
-            shared_libs: [
-                "vendor.samsung.hardware.audio-V1-ndk",
-                "libbase",
-                "libbinder_ndk",
-                "libcutils",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libskeymint10device",
     owner: "samsung",
     strip: {
@@ -6337,31 +6308,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "android.hardware.nfc-V1-ndk",
                 "vendor.samsung.hardware.nfc_aidl-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "service-listener-ext-aidl-V1-ndk",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/service-listener-ext-aidl-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
