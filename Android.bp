@@ -3392,21 +3392,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libsemnativecarrierfeature.so",
-            ],
-            shared_libs: [
-                "libexpat",
-                "libcutils",
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libsemnativecarrierfeature.so",
@@ -3423,7 +3408,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
