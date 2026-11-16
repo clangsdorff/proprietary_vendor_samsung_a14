@@ -373,15 +373,12 @@ PRODUCT_PACKAGES += \
     gps \
     gpsd \
     macloader \
-    mfgloader \
     rild \
     secaudiohalaidl \
     vendor.samsung.hardware.camera.provider-service_64 \
     vendor.samsung.hardware.security.widevine.keyprov-service \
     vendor.samsung.hardware.sysinput-service \
     vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service \
-    slsi_wlan_udi_log \
-    slsi_wlan_udi_log_decode \
     tzdaemon \
     tzts_daemon \
     vendor.samsung.hardware.security.fkeymaster-service \
