@@ -393,8 +393,6 @@ on fs
     wait /dev/block/by-name/sec_efs
     mount ext4 /dev/block/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
 
-    setprop ro.crypto.fuse_sdcard true
-
 #    wait /dev/block/by-name/spu
 #    mount ext4 /dev/block/by-name/spu /spu nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
 
@@ -411,13 +409,6 @@ on fs
 
     mkdir /mnt/vendor/persist/data/sfs 0700 system system
     mkdir /mnt/vendor/persist/data/tz 0700 system system
-
-    # Enable rmnet data and aggregation
-    setprop persist.rmnet.mux enabled
-    setprop persist.rmnet.data.enable true
-    setprop persist.data.wda.enable true
-    setprop persist.data.df.agg.dl_pkt 10
-    setprop persist.data.df.agg.dl_size 4096
 
 # Permissions for ds_detect
     chmod 0660 /sys/devices/platform/cpif/sim/ds_detect
