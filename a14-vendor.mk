@@ -6,7 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/a14
 
 PRODUCT_COPY_FILES += \
-    vendor/samsung/a14/proprietary/vendor/etc/SoundBoosterParam.txt:$(TARGET_COPY_OUT_VENDOR)/etc/SoundBoosterParam.txt \
     vendor/samsung/a14/proprietary/vendor/etc/a2dpsink_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dpsink_audio_policy_configuration.xml \
     vendor/samsung/a14/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json \
     vendor/samsung/a14/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json \
@@ -190,10 +189,6 @@ PRODUCT_PACKAGES += \
     libOpenCL_stock \
     libOpenCv.camera.samsung \
     libSEF.quram \
-    lib_SoundAlive_3DPosition_ver202 \
-    lib_SoundAlive_AlbumArt_ver105 \
-    lib_SoundAlive_play_plus_ver400 \
-    lib_SoundBooster_ver1100 \
     libacryl \
     libalsautils_sec \
     libbeautyshot.arcsoft \
