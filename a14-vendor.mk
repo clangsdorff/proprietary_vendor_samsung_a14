@@ -129,29 +129,11 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140.bin \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/build_id.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/build_id.txt \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/debug/common/log-strings.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/debug/common/log-strings.bin \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/debug/wlan/hip_signals.xml:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/debug/wlan/hip_signals.xml \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/debug/wlan/hydra_config.sdb:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/debug/wlan/hydra_config.sdb \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/debug/wlan/id.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/debug/wlan/id.txt \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/debug/wlan/mib_out.xml:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/debug/wlan/mib_out.xml \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/debug/wlan/symbols.dbg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/debug/wlan/symbols.dbg \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/debug/wlan/unicli.dbg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/debug/wlan/unicli.dbg \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/debug/wlan/unitab.dbg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/debug/wlan/unitab.dbg \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/debug/wlan/univif.dbg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/debug/wlan/univif.dbg \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140/debug/wlan/xide_mib.dbg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140/debug/wlan/xide_mib.dbg \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_bt.hcf:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_bt.hcf \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_common.hcf:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_common.hcf \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t.bin \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/build_id.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/build_id.txt \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/debug/common/log-strings.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/debug/common/log-strings.bin \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/debug/wlan/hip_signals.xml:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/debug/wlan/hip_signals.xml \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/debug/wlan/hydra_config.sdb:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/debug/wlan/hydra_config.sdb \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/debug/wlan/id.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/debug/wlan/id.txt \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/debug/wlan/mib_out.xml:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/debug/wlan/mib_out.xml \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/debug/wlan/symbols.dbg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/debug/wlan/symbols.dbg \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/debug/wlan/unicli.dbg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/debug/wlan/unicli.dbg \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/debug/wlan/unitab.dbg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/debug/wlan/unitab.dbg \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/debug/wlan/univif.dbg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/debug/wlan/univif.dbg \
-    vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t/debug/wlan/xide_mib.dbg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t/debug/wlan/xide_mib.dbg \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t_wlan.hcf:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t_wlan.hcf \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_t_wlan_t.hcf:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_t_wlan_t.hcf \
     vendor/samsung/a14/proprietary/vendor/firmware/wifi/mx140_wlan.hcf:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/mx140_wlan.hcf \
