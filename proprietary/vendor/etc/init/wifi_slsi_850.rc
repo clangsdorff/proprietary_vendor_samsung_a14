@@ -39,41 +39,20 @@ on post-fs-data
     chmod 0644 /sys/wifi/memdump
 
     # for WIFI TRP/TIS
-    chown wifi wifi /data/vendor/conn/.psm.info
     chmod 0644 /data/vendor/conn/.psm.info
     chown wifi wifi /sys/wifi/pm
     chmod 0640 /sys/wifi/pm
 
     # for WIFI Antenna Selection
-    chown wifi wifi /data/vendor/conn/.ant.info
     chmod 0644 /data/vendor/conn/.ant.info
     chown wifi wifi /sys/wifi/ant
     chmod 0640 /sys/wifi/ant
 
-    # for DCXO CALDATA
-    chown wifi wifi /sys/wifi/wlbt_dcxo_caldata
-    chmod 0640 /sys/wifi/wlbt_dcxo_caldata
-    
-    chown wifi wifi /sys/wifi/feature
-    chmod 0640 /sys/wifi/feature
-    
-    chown wifi wifi /sys/wifi/mac_addr
-    chmod 0640 /sys/wifi/mac_addr
-    
-    chown wifi wifi /sys/wifi/dump_in_progress
-    chmod 0660 /sys/wifi/dump_in_progress
-
 on fs
 # scsc daemon
     start wlbtd
-    start wpal
 
 service wlbtd /vendor/bin/wlbtd
-    class main
-    user wifi
-    group wifi inet log sdcard_rw misc
-
-service wpal /vendor/bin/wpal
     class main
     user wifi
     group wifi inet log sdcard_rw misc

@@ -54,24 +54,8 @@ on post-fs-data
 
     start macloader
 
-on property:ro.boot.debug_level=0x4f4c
-    setprop persist.log.tag.ApfFilter UNKNOWN
-on property:ro.boot.debug_level=0x494d
-    setprop persist.log.tag.ApfFilter DEBUG
-on property:ro.boot.debug_level=0x4948
-    setprop persist.log.tag.ApfFilter DEBUG
-
 on boot
     setprop wifi.interface wlan0
-
-# start for WiFi MFG (TestMode)
-service mfgloader /vendor/bin/hw/mfgloader
-    class wlanfactorytest
-    user wifi
-    group wifi inet net_raw net_admin
-    capabilities NET_ADMIN NET_RAW SYS_MODULE
-    disabled
-    oneshot
 
 service macloader /vendor/bin/hw/macloader
     class main
@@ -80,14 +64,3 @@ service macloader /vendor/bin/hw/macloader
     capabilities NET_ADMIN NET_RAW SYS_MODULE
     disabled
     oneshot
-
-service wlandutservice /system/bin/wlandutservice
-    class wlanfactorytest
-    user system
-    group system wifi net_raw net_admin inet
-    capabilities NET_ADMIN NET_RAW
-    disabled
-    oneshot
-
-# end of WiFi MFG (TestMode)
-
