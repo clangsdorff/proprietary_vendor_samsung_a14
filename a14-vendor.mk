@@ -369,7 +369,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.security.widevine.keyprov-service.xml \
     vendor.samsung.hardware.sehradio_manifest_2_202404.xml \
     vendor.samsung.hardware.sysinput-default.xml \
-    hcgcd \
     android.hardware.security.keymint-service.samsung \
     gps \
     gpsd \
@@ -381,7 +380,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.security.widevine.keyprov-service \
     vendor.samsung.hardware.sysinput-service \
     vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service \
-    iod \
     slsi_wlan_udi_log \
     slsi_wlan_udi_log_decode \
     tzdaemon \
