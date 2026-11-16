@@ -365,7 +365,6 @@ PRODUCT_PACKAGES += \
     com.samsung.android.camera.unihal.signed \
     secaudiohalaidl_manifest.xml \
     vendor.samsung.hardware.camera.provider-service.xml \
-    vendor.samsung.hardware.radio.exclude.slsi.xml \
     vendor.samsung.hardware.radio_manifest_2_202404.xml \
     vendor.samsung.hardware.security.fkeymaster-service.xml \
     vendor.samsung.hardware.security.widevine.keyprov-service.xml \
