@@ -220,7 +220,6 @@ PRODUCT_PACKAGES += \
     libphotohdr \
     libqfp_sensortest \
     libremosaic_wrapper \
-    libsavsac \
     libsavscmn \
     libsavsvc \
     libsecaudioinfo \
@@ -234,9 +233,6 @@ PRODUCT_PACKAGES += \
     libsfp_teegw \
     libsimba.media.samsung \
     libskhynix_q2b_5022Q_shared \
-    libsnaace \
-    libsnamrnb \
-    libsnamrwb \
     libstagefright_foundation_vendor \
     libsynaFpSensorTestNwd \
     libteecl \
