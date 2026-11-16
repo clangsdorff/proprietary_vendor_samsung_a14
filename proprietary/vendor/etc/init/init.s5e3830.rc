@@ -74,8 +74,6 @@ on init
     # Configuration to G2D blocking mode
     write /sys/module/g2d_task/parameters/block_on_contension 1
 
-#start watchdogd
-
 on post-fs
 # set RLIMIT_MEMLOCK to 64KB
     setrlimit 8 65536 65536
@@ -129,13 +127,6 @@ on post-fs-data
     chown system bluetooth /mnt/vendor/efs/bluetooth/bt_addr
     chmod 0770 /mnt/vendor/efs/bluetooth
     chmod 0660 /mnt/vendor/efs/bluetooth/bt_addr
-
-# Directory for GPS
-    rm /data/system/gps/gps_started
-    rm /data/system/gps/glonass_started
-    rm /data/system/gps/beidou_started
-    rm /data/system/gps/smd_started
-    rm /data/system/gps/sv_cno.info
 
 ## SCSC WLAN
     # Setup Wi-Fi permissions
@@ -262,30 +253,14 @@ on post-fs-data
 # HWC data
     mkdir /data/vendor/log/hwc 0771 system graphics
 
-# Fingerprint sensor
-    chmod 0660 /dev/goodix_fp
-    chown system system /dev/goodix_fp
-    chown system radio /sys/class/fingerprint/fingerprint/type_check
-    chown system radio /sys/class/fingerprint/fingerprint/name
-    chown system radio /sys/class/fingerprint/fingerprint/vendor
-    chown system radio /sys/class/fingerprint/fingerprint/adm
-    chown system radio /sys/class/fingerprint/fingerprint/bfs_values
-    chown system radio /sys/class/fingerprint/fingerprint/intcnt
-    chown system radio /sys/class/fingerprint/fingerprint/resetcnt
-
-    mkdir /data/vendor/biometrics 0770 system system
-    mkdir /data/vendor/fpSnrTest 0770 system system
-
 # setup cgroup freezer for freecess
     mkdir /dev/freezer
     mount cgroup none /dev/freezer freezer
 
 on boot
-    setprop wifi.interface wlan0
     write /proc/sys/vm/min_free_order_shift 4
 
     restorecon_recursive /sys/kernel/debug
-    #write /sys/module/scsc_mx/parameters/disable_recovery_handling 2
 
     # Allow to access debugfs for system:system
     chmod 0755 /sys/kernel/debug
@@ -311,7 +286,6 @@ on boot
 
 #Performance
     #EMS
-    chown system system /sys/kernel/ems/emstune/req_mode
     chmod 0664 /sys/kernel/ems/emstune/req_mode
 
     #CPUSET
@@ -341,10 +315,6 @@ on boot
     chmod 0664 /sys/class/input_booster/touch/head
     chmod 0664 /sys/class/input_booster/touch/tail
 
-    # LPM Info
-    chown system system /efs/lpm_info.log
-    chmod 0660 /efs/lpm_info.log
-
     #GPU
     chown root system /sys/devices/platform/11500000.mali/dvfs_min_lock
     chown root system /sys/devices/platform/11500000.mali/dvfs_max_lock
@@ -373,10 +343,6 @@ on boot
     chown system system /sys/class/android_usb/android0/bDeviceClass
     chmod 0660 /sys/class/android_usb/android0/bDeviceClass
 
-# Permissions for  LSI NFC
-#    chmod 0660 /dev/sec-nfc
-#    chown nfc nfc /dev/sec-nfc
-
 on early-fs
     start vold
     write /sys/devices/platform/fmp/fmp-fips/fmp_fips_run 1
@@ -392,9 +358,6 @@ on fs
     # We need to seperate mounting SEC_EFS partition from fstab file due to GSI image loading case
     wait /dev/block/by-name/sec_efs
     mount ext4 /dev/block/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
-
-#    wait /dev/block/by-name/spu
-#    mount ext4 /dev/block/by-name/spu /spu nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
 
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
@@ -429,22 +392,6 @@ on fs
     chown system system /sys/class/lcd/panel/vcom_trim
     chown system system /sys/class/lcd/panel/panel_vcom_type
 
-# Permissions for gnss
-    chmod 0660 /dev/gnss_ipc
-    chown system system /dev/gnss_ipc
-
-#mail
-    chown root system /sys/devices/platform/11500000.mali/dvfs_min_lock
-    chown root system /sys/devices/platform/11500000.mali/dvfs_max_lock
-    chmod 664 /sys/devices/platform/11500000.mali/dvfs_min_lock
-    chmod 664 /sys/devices/platform/11500000.mali/dvfs_max_lock
-
-# Copy DRM Key
-#    copy /system/app/wv.keys /factory/wv.keys
-
-# Permission for DRM Key
-#    chmod 0644 /factory/wv.keys
-
 # FM Radio
     chmod 0666 /dev/radio0
 
@@ -470,12 +417,6 @@ service abox /vendor/bin/main_abox 14a50000.abox /data/vendor/log/abox
     user audioserver
     group system
 
-# scsc daemon
-#    service wlbtd /vendor/bin/wlbtd
-#    class main
-#    user wifi
-#    group wifi inet log sdcard_rw misc
-
 # shutdown animation
 service shutdownanim /system/bin/bootanimation -shutdown
     class core animation
@@ -484,44 +425,12 @@ service shutdownanim /system/bin/bootanimation -shutdown
     disabled
     oneshot
 
-## SCSC WLAN
-# WiFi wpa suppplicant service
-# service wpa_supplicant /vendor/bin/hw/wpa_supplicant -ddd -t \
-#    -ip2p0  -Dnl80211 -c/data/vendor/wifi/wpa/p2p_supplicant.conf -N \
-#    -iwlan0 -Dnl80211 -c/data/vendor/wifi/wpa/wpa_supplicant.conf \
-#    -O/data/vendor/wifi/wpa/sockets \
-#    -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
-#    #   we will start as root and wpa_supplicant will switch to user wifi
-#    #   after setting up the capabilities required for WEXT
-#    #   user wifi
-#    #   group wifi inet keystore
-#    interface android.hardware.wifi.supplicant@1.0::ISupplicant default
-#    interface android.hardware.wifi.supplicant@1.1::ISupplicant default
-#    interface android.hardware.wifi.supplicant@1.2::ISupplicant default
-#    class main
-#    socket wpa_wlan0 dgram 660 wifi wifi
-#    disabled
-#    oneshot
-#    seclabel u:r:hal_wifi_supplicant_default:s0
-
 # SSWAP
 on boot
     write /proc/sys/vm/swappiness 130
 
-# Set watchdog timer to 40 seconds and pet it every 10 seconds to get a 30 second margin
-# Increase watchdogd priority for keeping up schedule
-#service watchdogd /system/bin/watchdogd 10 30
-#    class core
-#    oneshot
-#    priority -10
-#    seclabel u:r:watchdogd:s0
-
 # sensorhub fw
 on post-fs
-#    chmod 0770 /spu/sensorhub
-#    chmod 0660 /spu/sensorhub/shub_spu.bin
-#    chown root system /spu/sensorhub
-#    chown root system /spu/sensorhub/shub_spu.bin
     write /sys/class/sensors/ssp_sensor/fs_ready 1
 
 # Sensors permissions
@@ -530,48 +439,10 @@ on post-fs-data
     chown root system /efs/FactoryApp/cal_data
     chown root system /efs/FactoryApp/prox_settings
 # Accelerometer_sensor
-    chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
-    chown system radio /sys/class/sensors/accelerometer_sensor/calibration
-    chown system radio /sys/class/sensors/accelerometer_sensor/reactive_alert
-    chown system radio /sys/class/sensors/accelerometer_sensor/vendor
-    chown system radio /sys/class/sensors/accelerometer_sensor/name
-    chown system radio /sys/class/sensors/accelerometer_sensor/selftest
-    chown system radio /sys/class/sensors/accelerometer_sensor/lowpassfilter
-    chown system system /sys/class/sensors/accelerometer_sensor/dhr_sensor_info
     chown system system /efs/calibration_data
     chmod 0666 /efs/calibration_data
 # Proximity_sensor
-    chown system radio /sys/class/sensors/proximity_sensor/state
-    chown system radio /sys/class/sensors/proximity_sensor/raw_data
-    chown system radio /sys/class/sensors/proximity_sensor/prox_avg
-    chown system radio /sys/class/sensors/proximity_sensor/prox_cal
-    chown system radio /sys/class/sensors/proximity_sensor/vendor
-    chown system radio /sys/class/sensors/proximity_sensor/name
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_high
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_low
-    chown system radio /sys/class/sensors/proximity_sensor/prox_offset_pass
-    chown system radio /sys/class/sensors/proximity_sensor/prox_trim
     chown system radio /sys/class/sensors/proximity_sensor/modify_settings
-    chown system system /sys/class/sensors/proximity_sensor/dhr_sensor_info
-# SensorHub
-    chown system radio /sys/class/sensors/ssp_sensor/enable
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_rev
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_name
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_test
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_reset
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_update
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_sleep_test
-    chown system radio /sys/class/sensors/ssp_sensor/sensor_dump
-    chown system radio /sys/class/sensors/ssp_sensor/ssp_flush
-    chown system radio /sys/class/sensors/ssp_sensor/sensor_spec
-    chown system radio /sys/class/sensors/ssp_sensor/scontext_list
-    chmod 0600 /dev/batch_io
-    chown system system /dev/batch_io
-
-# Meta event
-    chown system radio /sys/class/sensors/sensor_dev/flush
-# Grip Sensor
-    chown system radio /sys/class/sensors/grip_sensor/noti_enable
 
 # Create carrier folder for HiddenMenu
 on post-fs
