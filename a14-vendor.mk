@@ -285,7 +285,7 @@ PRODUCT_PACKAGES += \
     libsamsungcamerahwl_impl \
     libscaler_hw.unifunc \
     libscaler_sw.unifunc \
-    libsec-ril-impl \
+    libsec-ril \
     libsec2lsi_conversion \
     libskeymint10device \
     libskeymint_cli \
